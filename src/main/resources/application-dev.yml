@@ -1,0 +1,23 @@
+server:
+  port: 9000
+  servlet:
+    # 项目访问路径
+    context-path: /springboot
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssm?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# springboot整合mybatis
+mybatis:
+  type-aliases-package: com.muxin.pojo
+  mapper-locations: classpath:mapper/*.xml
+
+# 自定义属性
+user:
+  username: zhangsan
+  password: 123456
